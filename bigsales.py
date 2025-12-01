@@ -97,7 +97,7 @@ plt.show()
 # Clicks vs Quantity Analysis
 # -----------------------------
 plt.figure(figsize=(8,6))
-sns.regplot(data=sale_df.sample(1000), x='Clicks', y='Quantity')  # sample for performance
+sns.regplot(data=sale_df, x='Clicks', y='Quantity')  # sample for performance
 plt.title("Clicks vs Quantity")
 plt.show()
 
@@ -113,3 +113,4 @@ plt.show()
 # -----------------------------
 adsource_views = sale_df.groupby('AdSource')['Views'].sum()
 print("Total Views per AdSource:\n", adsource_views)
+
